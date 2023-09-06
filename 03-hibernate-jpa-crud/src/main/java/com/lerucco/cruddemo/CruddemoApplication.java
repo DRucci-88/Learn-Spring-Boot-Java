@@ -61,8 +61,8 @@ public class CruddemoApplication {
 			System.out.println("Deleted Student : " + student.toString());
  
 			deleteStudent(studentDAO, 90); // No Error 
-			int numRowsDeleted = deleteAllStudents(studentDAO);
-			System.out.println("Deleted All Students : " + numRowsDeleted + " rows");
+			// int numRowsDeleted = deleteAllStudents(studentDAO);
+			// System.out.println("Deleted All Students : " + numRowsDeleted + " rows");
 		};
 	}
 
