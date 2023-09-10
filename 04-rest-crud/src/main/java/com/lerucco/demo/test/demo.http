@@ -2,3 +2,6 @@ GET http://localhost:8080/test/hello
 
 ###
 GET http://localhost:8080/api/students
+
+###
+GET http://localhost:8080/api/student/4
