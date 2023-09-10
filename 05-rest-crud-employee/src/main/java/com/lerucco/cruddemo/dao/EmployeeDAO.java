@@ -1,15 +1,15 @@
-package com.lerucco.cruddemo.dao;
+// package com.lerucco.cruddemo.dao;
 
-import java.util.List;
+// import java.util.List;
 
-import com.lerucco.cruddemo.entity.Employee;
+// import com.lerucco.cruddemo.entity.Employee;
 
-public interface EmployeeDAO {
-    List<Employee> findAll();
+// public interface EmployeeDAO {
+// List<Employee> findAll();
 
-    Employee findById(int id);
+// Employee findById(int id);
 
-    Employee save(Employee employee);
+// Employee save(Employee employee);
 
-    void deleteById(int id);
-}
+// void deleteById(int id);
+// }
