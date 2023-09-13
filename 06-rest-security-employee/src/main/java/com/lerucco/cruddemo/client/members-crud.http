@@ -1,0 +1,47 @@
+###
+GET http://localhost:8080/api/members?size=20
+
+###
+GET http://localhost:8080/api/members?size=20&sort=lastName,desc
+
+###
+GET http://localhost:8080/api/members?size=20&sort=lastName,email,asc
+
+###
+GET http://localhost:8080/api/members?page=1
+
+###
+GET http://localhost:8080/api/members?page=2
+
+### 
+GET http://localhost:8080/api/members/1
+
+### 
+GET http://localhost:8080/api/members/100
+
+###
+POST http://localhost:8080/api/members
+Content-Type: application/json
+
+{
+  "firstName": "La",
+  "lastName": "Hector",
+  "email": "hector@gmail.com"
+}
+
+###
+PUT http://localhost:8080/api/members
+Content-Type: application/json
+
+{
+  "id": 6,
+  "firstName": "La",
+  "lastName": "Hector Update",
+  "email": "hector@gmail.com"
+}
+
+###
+DELETE  http://localhost:8080/api/members/6
+
+###
+DELETE  http://localhost:8080/api/members/100
