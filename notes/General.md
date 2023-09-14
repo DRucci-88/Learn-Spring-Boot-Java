@@ -1,4 +1,5 @@
 ## Basic Understanding
+
 ### Spring Container
 - Create and manage objects (Inversion of Control)
 - Inject object's dependencies (Dependency Injection)
@@ -21,6 +22,7 @@
 	- How about other packages ? 
 		- `com.luv2code.util`
 		- `org.acme.cart`
+
 ### Injection
 Inject dependencies by calling any method on your class, Simply give: `@Autowired`
 1. Constrctor Injection
