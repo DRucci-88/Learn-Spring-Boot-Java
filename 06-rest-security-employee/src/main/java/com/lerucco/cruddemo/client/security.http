@@ -1,0 +1,104 @@
+### username and password -> diambil pake Postman karena harus di convert ke base64
+### am9objpqb2hu john john EMPLOYEE
+### bWFyeTptYXJ5 mary mary MANAGER
+### bGU6bGU= le le ADMIN
+
+### Get All ###
+### john 
+GET http://localhost:8080/api/employees?sort=id,desc
+Authorization: Basic am9objpqb2hu
+
+### mary
+GET http://localhost:8080/api/employees
+Authorization: Basic bWFyeTptYXJ5
+
+### le
+GET http://localhost:8080/api/employees
+Authorization: Basic bGU6bGU=
+
+### Get By ID ###
+### john 
+GET http://localhost:8080/api/employees/1
+Authorization: Basic am9objpqb2hu
+
+### mary
+GET http://localhost:8080/api/employees/2
+Authorization: Basic bWFyeTptYXJ5
+
+### le
+GET http://localhost:8080/api/employees/3
+Authorization: Basic bGU6bGU=
+
+### Create ###
+### john Unauthorized due its role
+POST http://localhost:8080/api/employees
+Authorization: Basic am9objpqb2hu
+Content-Type: application/json
+
+{
+  "firstName": "Le",
+  "lastName": "Asep",
+  "email": "asep@gmail.com"
+}
+
+### mary
+POST http://localhost:8080/api/employees
+Authorization: Basic bWFyeTptYXJ5
+Content-Type: application/json
+
+{
+  "firstName": "Le",
+  "lastName": "Asep",
+  "email": "asep@gmail.com"
+}
+
+### le
+POST http://localhost:8080/api/employees
+Authorization: Basic bGU6bGU=
+Content-Type: application/json
+
+{
+  "firstName": "Le",
+  "lastName": "Kundur",
+  "email": "kundur@gmail.com"
+}
+
+### Update ###
+### le
+PUT http://localhost:8080/api/employees
+Authorization: Basic am9objpqb2hu
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Le Updated",
+  "lastName": "Asep",
+  "email": "asep@gmail.com"
+}
+
+### mary
+PUT http://localhost:8080/api/employees
+Authorization: Basic bWFyeTptYXJ5
+
+{
+  "id": 1,
+  "firstName": "Le Update",
+  "lastName": "Asep Update",
+  "email": "asep@gmail.com"
+}
+
+### le
+PUT http://localhost:8080/api/employees
+Authorization: Basic bGU6bGU=
+Content-Type: application/json
+
+{
+  "id": 2,
+  "firstName": "Le",
+  "lastName": "Kundur",
+  "email": "kundur@gmail.com"
+}
+
+### Delete ###
+DELETE http://localhost:8080/api/employees/1
+Authorization: Basic bGU6bGU=

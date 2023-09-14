@@ -1,0 +1,61 @@
+package com.lerucco.cruddemo.security;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class DemoSecurityConfig {
+
+    @Bean
+    public InMemoryUserDetailsManager userDetailsManager() {
+        UserDetails john = User.builder()
+                .username("john")
+                .password("{noop}john")
+                .roles("EMPLOYEE")
+                .build();
+
+        UserDetails mary = User.builder()
+                .username("mary")
+                .password("{noop}mary")
+                .roles("EMPLOYEE", "MANAGER")
+                .build();
+
+        UserDetails le = User.builder()
+                .username("le")
+                .password("{noop}le")
+                .roles("EMPLOYEE", "MANAGER", "ADMIN")
+                .build();
+
+        return new InMemoryUserDetailsManager(john, mary, le);
+    }
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+
+        // Authorization rules given endpoints based on role
+        httpSecurity.authorizeHttpRequests(configurer -> configurer
+                .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE")
+                .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
+                .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
+                // .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN"));
+
+        // Use HTTP Basic Authentication
+        httpSecurity.httpBasic(Customizer.withDefaults());
+
+        // Disable CSRF
+        // In general, not required for stateless REST APIs that use :
+        // POST, PUT, DELETE, PATCH
+        httpSecurity.csrf(csrf -> csrf.disable());
+        return httpSecurity.build();
+
+    }
+
+}
