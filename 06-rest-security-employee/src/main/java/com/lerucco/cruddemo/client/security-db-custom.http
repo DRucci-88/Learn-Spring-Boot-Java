@@ -1,0 +1,22 @@
+### username and password -> diambil pake Postman karena harus di convert ke base64
+### am9objpmdW4xMjM= john fun123 EMPLOYEE
+### bWFyeTpmdW4xMjM= mary fun123 MANAGER
+### c3VzYW46ZnVuMTIz susan fun123 ADMIN
+
+### Get All ###
+### john 
+GET http://localhost:8080/api/employees?sort=id,asc
+Authorization: Basic am9objpmdW4xMjM=
+
+### Delete ###
+### john
+DELETE http://localhost:8080/api/employees/1
+Authorization: Basic am9objpmdW4xMjM=
+
+### mary
+DELETE http://localhost:8080/api/employees/1
+Authorization: Basic bWFyeTpmdW4xMjM=
+
+### susan
+DELETE http://localhost:8080/api/employees/2
+Authorization: Basic c3VzYW46ZnVuMTIz

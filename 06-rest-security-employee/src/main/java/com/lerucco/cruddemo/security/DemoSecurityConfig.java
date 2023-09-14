@@ -20,8 +20,19 @@ public class DemoSecurityConfig {
 	// Add support for JDBC ... no more hardcoded users
 	@Bean
 	public UserDetailsManager userDetailsManager(DataSource dataSource) {
+		JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
+
+		// Define query to retrive a user by username
+		// "?" parameter value will be the user name from login
+		// How to find users
+		jdbcUserDetailsManager.setUsersByUsernameQuery(
+				"select user_id, pw, active from members where user_id=?");
+
+		// Define query to retrieve the authorities/roles by username
+		jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
+				"select user_id, role from roles where user_id=?");
 		// Tell Spring Security to use JDBC authencation with our data source (database)
-		return new JdbcUserDetailsManager(dataSource);
+		return jdbcUserDetailsManager;
 	}
 
 	@Bean
