@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+</head>
+<body>
+  
+  <form th:action="@{/processForm}" method="get">
+    <label>Form v1 using Query Param</label>
+    <br/>
+    <input type="text" name="studentName" placeholder="What's your name?"/>
+    <input type="submit"/>
+  </form>
+  <br/><br/>
+  <form th:action="@{/processFormv2}" method="get">
+    <label>Form v2 using HttpServletRequest and Model</label>
+    <br/>
+    <input type="text" name="studentName" placeholder="What's your name?"/>
+    <input type="submit"/>
+  </form>
+  <br/><br/>
+  <form th:action="@{/processFormv3}" method="get">
+    <label>Form v3 using @RequestParam and Model</label>
+    <br/>
+    <input type="text" name="studentName" placeholder="What's your name?"/>
+    <input type="submit"/>
+  </form>
+
+  <h2>Student v1</h2>
+  <div th:each="student : ${students}">
+    Hi
+    <p th:text="${student}">Hi</p>
+  </div>
+
+  <h2>Student v2</h2>
+  <div>
+    Hi
+    <p th:each="student : ${students}" th:text="${student}"></p>
+  </div>
+  
+</body>
+</html>

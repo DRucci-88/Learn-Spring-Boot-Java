@@ -12,8 +12,17 @@
 
 <body>
   <h1>Thymeleaf</h1>
-  <p th:text="'Time on the server is ' + ${theDate}" class="funny"></p>
 
+  <h2>Form v1 using Query Param</h2>
+  <p th:text="'Time on the server is ' + ${theDate}" class="funny"></p>
+  <p th:text="'Student Name from Controller : ' + ${studentName}" class="student"></p>
+  <p th:text="'Student Name from Query Param : ' + ${param.studentName}" class="student"></p>
+
+  <h2>Form v2 using HttpServletRequest and Model</h2>
+  <p th:text="'Message : ' + ${messagev2}" class="student"></p>
+
+  <h2>Form v3 using @RequestParam and Model</h2>
+  <p th:text="'Message : ' + ${messagev3}" class="student"></p>
 </body>
 
 </html>
