@@ -2,7 +2,8 @@ package com.lerucco.thymeleafdemo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,7 +13,7 @@ import java.util.*;
 public class HelloWorldController {
 
     // Create controller to show initial HTML form
-    @RequestMapping("/showForm")
+    @GetMapping("/showForm")
     public String showForm(Model model) {
         List<String> students = new ArrayList<>(Arrays.asList("John Doe", "Cameron", "Le Rucco"));
         model.addAttribute("students", students);
@@ -20,7 +21,7 @@ public class HelloWorldController {
     }
 
     // Need a controller method to process the HTML form
-    @RequestMapping("/processForm")
+    @PostMapping("/processFormv1")
     public String processForm(Model model) {
         model.addAttribute("theDate", new java.util.Date());
 
@@ -32,7 +33,7 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormv2")
+    @PostMapping("/processFormv2")
     public String processFormv2(HttpServletRequest request, Model model) {
         // Read the request parameter from the HTML form
         String studentName = request.getParameter("studentName");
@@ -48,7 +49,7 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormv3")
+    @PostMapping("/processFormv3")
     public String processFormv3(@RequestParam("studentName") String studentName, Model model) {
         studentName = studentName.toUpperCase();
 

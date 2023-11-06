@@ -7,21 +7,21 @@
 </head>
 <body>
   
-  <form th:action="@{/processForm}" method="get">
+  <form th:action="@{/processFormv1}" method="POST">
     <label>Form v1 using Query Param</label>
     <br/>
     <input type="text" name="studentName" placeholder="What's your name?"/>
     <input type="submit"/>
   </form>
   <br/><br/>
-  <form th:action="@{/processFormv2}" method="get">
+  <form th:action="@{/processFormv2}" method="POST">
     <label>Form v2 using HttpServletRequest and Model</label>
     <br/>
     <input type="text" name="studentName" placeholder="What's your name?"/>
     <input type="submit"/>
   </form>
   <br/><br/>
-  <form th:action="@{/processFormv3}" method="get">
+  <form th:action="@{/processFormv3}" method="POST">
     <label>Form v3 using @RequestParam and Model</label>
     <br/>
     <input type="text" name="studentName" placeholder="What's your name?"/>
