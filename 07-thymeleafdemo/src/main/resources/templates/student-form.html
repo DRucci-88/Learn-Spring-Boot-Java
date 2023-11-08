@@ -34,13 +34,18 @@
 
     <br /><br />
     Programming Languages:
-    <input 
-      type="radio" 
-      th:field="*{programmingLanguageId}" 
-      th:each="pl : ${programmingLanguages}" 
-      th:value="${pl.id}" 
-      th:text="${pl.name}" />
+    <input type="radio" th:field="*{programmingLanguageId}" th:each="pl : ${programmingLanguages}" th:value="${pl.id}" th:text="${pl.name}" />
     <!-- <p th:each="pl : ${programmingLanguages}" th:text="${pl}"></p> -->
+
+    <br /><br />
+    Operating System:
+    <input 
+      type="checkbox" 
+      th:field="*{operatingSystemId}" 
+      th:each="os : ${operatingSystems}" 
+      th:value="${os.id}" 
+      th:text="${os.name}" 
+    />
 
     <br /><br />
     <input type="submit" value="submit" />

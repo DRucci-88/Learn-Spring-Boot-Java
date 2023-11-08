@@ -9,15 +9,19 @@
   <h1>Student Confirmation</h1>
 
   The student is confirmed : <span th:text="${student.firstName} + ' ' + ${student.lastName} + ' from ' + ${country.name}"></span>
-  <br/>
+  <br/><br/>
   Student: <span th:text="${student}"></span>
   <br/>
   Country: <span th:text="${country}"></span>
   <br/>
   City: <span th:text="${city}"></span>
-  <br/><br/>
+  <br/>
   Programming Language: <span th:text="${programmingLanguage}"></span>
-  <br/><br/>
+  <br/>
+  Operating Systems: 
+  <li th:each="os : ${operatingSystems}" th:text="${os.name}"></li>
+
+  <br/>
   <button>
     <a href="/showStudentForm">Back to Student Form</a>
   </button>

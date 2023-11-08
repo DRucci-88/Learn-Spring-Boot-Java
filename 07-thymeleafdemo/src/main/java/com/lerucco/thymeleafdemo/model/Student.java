@@ -1,5 +1,7 @@
 package com.lerucco.thymeleafdemo.model;
 
+import java.util.List;
+
 public class Student {
     public Student() {
 
@@ -10,6 +12,15 @@ public class Student {
     private Integer countryId;
     private Integer cityId;
     private Integer programmingLanguageId;
+    private List<Integer> operatingSystemId;
+
+    public List<Integer> getOperatingSystemId() {
+        return operatingSystemId;
+    }
+
+    public void setOperatingSystemId(List<Integer> operatingSystemId) {
+        this.operatingSystemId = operatingSystemId;
+    }
 
     public Integer getProgrammingLanguageId() {
         return programmingLanguageId;
@@ -54,7 +65,8 @@ public class Student {
     @Override
     public String toString() {
         return "Student [firstName=" + firstName + ", lastName=" + lastName + ", countryId=" + countryId + ", cityId="
-                + cityId + ", programmingLanguageId=" + programmingLanguageId + "]";
+                + cityId + ", programmingLanguageId=" + programmingLanguageId + ", operatingSystemId="
+                + operatingSystemId + "]";
     }
 
 }
