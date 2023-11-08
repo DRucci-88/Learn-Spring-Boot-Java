@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d33fc9e6ad9591f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "865fd3c9eb45b10a",
             "type": "leaf",
             "state": {
@@ -30,8 +18,19 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "6fba0bdede1461ea",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.16"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -60,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "post",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +76,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security.md",
+                "file": "General.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security.md",
+                "file": "General.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security.md"
+                "file": "General.md"
               }
             }
           },
@@ -169,12 +169,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7d33fc9e6ad9591f",
+  "active": "6fba0bdede1461ea",
   "lastOpenFiles": [
-    "REST.md",
+    "Thymeleaf.md",
     "General.md",
-    "Hibernate and JPA.md",
     "Security.md",
+    "images/Thymeleaf/MVC Front Controller.png",
+    "images/Thymeleaf/Data Binding HTML.png",
+    "images/Thymeleaf/Data Binding Form.png",
+    "images/Thymeleaf/MVC.png",
+    "images/Thymeleaf/Static Resources Search.png",
+    "images/Thymeleaf",
+    "Pasted image 20231106103321.png",
+    "images",
+    "REST.md",
+    "Hibernate and JPA.md",
     "REST",
     "Tuning DB Module pada BAC04V230U.md",
     "WhatsApp Image 2023-07-04 at 11.15.00.jpg"
