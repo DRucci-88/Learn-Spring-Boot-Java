@@ -39,6 +39,8 @@ public class CustomerController {
             Model model // Binding
     ) {
         System.out.println("First Name: |" + customer.getFirstName() + "|");
+        System.out.println(bindingResult.toString());
+        System.out.println("\n\n\n\n");
         if (bindingResult.hasErrors()) {
             return "customer-form";
         }

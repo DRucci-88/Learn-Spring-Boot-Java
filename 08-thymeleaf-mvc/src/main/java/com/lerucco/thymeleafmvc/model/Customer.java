@@ -1,5 +1,7 @@
 package com.lerucco.thymeleafmvc.model;
 
+import com.lerucco.thymeleafmvc.validation.CourseCode;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -24,5 +26,8 @@ public class Customer {
     @NotNull(message = "is required")
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 digits")
     private String postalCode;
+
+    @CourseCode(value = "Le", message = "Must start with Le")
+    private String courseCode;
 
 }
