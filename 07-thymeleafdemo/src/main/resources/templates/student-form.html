@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <meta charset="UTF-8">
   <title>Student Registration</title>
@@ -10,11 +11,41 @@
 
   <form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
     First Name: <input type="text" th:field="*{firstName}" />
-    <br/><br/>
+
+    <br /><br />
+
     Last Name: <input type="text" th:field="*{lastName}" />
-    <br/><br/>
-    <input type="submit" value="submit"/>
-  </form> 
+
+    <br /><br />
+
+    Country:
+    <select th:field="*{countryId}">
+      <option th:each="country : ${countries}" th:value="${country.id}" th:text="${country.name}"></option>
+    </select>
+    <!-- <p th:each="country : ${countries}" th:text="${country.id} + ' ' + ${country.name}"></p> -->
+
+    <br /><br />
+
+    City:
+    <select th:field="*{cityId}">
+      <option th:each="city : ${cities}" th:value="${city.id}" th:text="${city.name}"></option>
+    </select>
+    <!-- <p th:each="city : ${cities}" th:text="${city.id} + ' ' + ${city.name}"></p> -->
+
+    <br /><br />
+    Programming Languages:
+    <input 
+      type="radio" 
+      th:field="*{programmingLanguageId}" 
+      th:each="pl : ${programmingLanguages}" 
+      th:value="${pl.id}" 
+      th:text="${pl.name}" />
+    <!-- <p th:each="pl : ${programmingLanguages}" th:text="${pl}"></p> -->
+
+    <br /><br />
+    <input type="submit" value="submit" />
+  </form>
 
 </body>
-</html> 
+
+</html>
