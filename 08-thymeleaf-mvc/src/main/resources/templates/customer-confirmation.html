@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Confirmation</title>
+</head>
+
+<body>
+  The customer is confirmed: <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
+  <br/><br/>
+  
+  <span th:text="${customer}"></span>
+
+  <br/><br/>
+  <button>
+    <a href="/">Back to Customer Form</a>
+  </button>
+</body>
+</html>
