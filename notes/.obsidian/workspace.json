@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General.md",
+                "file": "Thymeleaf.md",
                 "mode": "source",
                 "source": true
               }
             }
-          },
-          {
-            "id": "6fba0bdede1461ea",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.16"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "post",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "General.md",
+                "file": "Thymeleaf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "General.md",
+                "file": "Thymeleaf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General.md"
+                "file": "Thymeleaf.md"
               }
             }
           },
@@ -169,10 +157,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6fba0bdede1461ea",
+  "active": "865fd3c9eb45b10a",
   "lastOpenFiles": [
-    "Thymeleaf.md",
     "General.md",
+    "Thymeleaf.md",
+    "images/Thymeleaf/Type Mismatch Message.png",
+    "images/Thymeleaf/Init Binder.png",
+    "images/Thymeleaf/Validation.png",
     "Security.md",
     "images/Thymeleaf/MVC Front Controller.png",
     "images/Thymeleaf/Data Binding HTML.png",
