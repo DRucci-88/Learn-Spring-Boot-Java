@@ -1,4 +1,4 @@
-package com.lerucco.thymeleafmvccrud.Entity;
+package com.lerucco.thymeleafmvccrud.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

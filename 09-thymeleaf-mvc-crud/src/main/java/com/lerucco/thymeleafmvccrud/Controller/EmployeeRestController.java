@@ -1,4 +1,4 @@
-package com.lerucco.thymeleafmvccrud.Controller;
+package com.lerucco.thymeleafmvccrud.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lerucco.thymeleafmvccrud.Entity.Employee;
-import com.lerucco.thymeleafmvccrud.Service.EmployeeService;
+import com.lerucco.thymeleafmvccrud.entity.Employee;
+import com.lerucco.thymeleafmvccrud.service.EmployeeService;
 
 @RestController
 @RequestMapping("/api")

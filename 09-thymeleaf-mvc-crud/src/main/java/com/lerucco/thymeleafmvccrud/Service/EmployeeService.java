@@ -1,13 +1,12 @@
-package com.lerucco.thymeleafmvccrud.Service;
+package com.lerucco.thymeleafmvccrud.service;
 
 import java.util.Optional;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lerucco.thymeleafmvccrud.Entity.Employee;
-import com.lerucco.thymeleafmvccrud.Repository.EmployeeRepository;
+import com.lerucco.thymeleafmvccrud.entity.Employee;
+import com.lerucco.thymeleafmvccrud.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {
